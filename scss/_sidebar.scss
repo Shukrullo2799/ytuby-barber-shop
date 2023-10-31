@@ -1,0 +1,49 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 250px;
+  height: 100vh;
+  background: $white;
+  box-shadow: 0px 10px 20px rgba(153, 186, 237, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  &.open {
+    transform: translateX(0);
+  }
+  &_menu {
+    list-style: none;
+    &-item {
+      padding: 16px;
+      cursor: pointer;
+      border-bottom: 1px solid $title-color;
+    }
+    &-link {
+      font-weight: 500;
+      line-height: 133.6%;
+      color: $title-color;
+    }
+  }
+  &_actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

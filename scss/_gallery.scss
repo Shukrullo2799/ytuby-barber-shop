@@ -1,0 +1,46 @@
+.gallery {
+  position: relative;
+  &_bg {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: -160px;
+    z-index: -1;
+    @include breakpoint(1440) {
+      display: none;
+    }
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 110px;
+    @include breakpoint(1440) {
+      margin-bottom: 40px;
+    }
+  }
+  &_content {
+    display: flex;
+    gap: 37px;
+    flex-wrap: wrap;
+    max-width: 1380px;
+    margin: auto;
+    @include breakpoint(1440) {
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      @include breakpoint(576) {
+        max-width: 435px;
+        width: 80%;
+      }
+    }
+  }
+  .btn {
+    display: block;
+    margin: auto;
+    margin-top: 77px;
+    @include breakpoint(1440) {
+      margin-top: 40px;
+    }
+  }
+}

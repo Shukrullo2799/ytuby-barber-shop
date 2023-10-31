@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  color: $text-color;
+  font-size: 25px;
+  max-width: 1920px;
+  margin: auto;
+  @include breakpoint(1440) {
+    font-size: 20px;
+  }
+  @include breakpoint(990) {
+    font-size: 18px;
+  }
+  @include breakpoint(768) {
+    font-size: 16px;
+  }
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  border-radius: 20px;
+  background: $btn-bg;
+  flex-shrink: 0;
+  padding: 23px 32px;
+  color: $white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150.6%;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(153, 186, 237, 0.5);
+  &:hover {
+    background: $btn-bg-hover;
+  }
+  &:active {
+    transform: translate3d(0, 2px, 0);
+    box-shadow: 0px -4px 10px 1px rgba(153, 186, 237, 0.5);
+  }
+  @include breakpoint(1440) {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+  @include breakpoint(990) {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+.title {
+  color: $title-color;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 133.6%;
+  span {
+    color: $title-color-yellow;
+  }
+  @include breakpoint(1440) {
+    font-size: 48px;
+  }
+  @include breakpoint(990) {
+    font-size: 36px;
+  }
+}
+.text {
+  color: $text-color;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  opacity: 0.65;
+}
+.overflow-hidden {
+  overflow: hidden;
+}

@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  padding-bottom: 100px;
+  justify-content: space-between;
+  overflow: hidden;
+  @include breakpoint(1440) {
+    padding-bottom: 60px;
+  }
+  @include breakpoint(768) {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 60px;
+  }
+  &_content {
+    margin-left: 180px;
+    width: 576px;
+    flex-shrink: 0;
+    @include breakpoint(1440) {
+      margin-left: 80px;
+      width: 420px;
+    }
+    @include breakpoint(990) {
+      margin-left: 40px;
+      width: 40%;
+    }
+    @include breakpoint(768) {
+      margin: 0 auto;
+      width: 80%;
+      text-align: center;
+    }
+    &-title {
+      margin-bottom: 29px;
+      @include breakpoint(1440) {
+        margin-bottom: 20px;
+      }
+      @include breakpoint(990) {
+        margin-bottom: 10px;
+      }
+    }
+    &-text {
+      margin-bottom: 97px;
+      @include breakpoint(1440) {
+        margin-bottom: 60px;
+      }
+      @include breakpoint(990) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &_image {
+    @include breakpoint(1440) {
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

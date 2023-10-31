@@ -1,0 +1,91 @@
+.history {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  padding-bottom: 100px;
+
+  @include breakpoint(1800) {
+    gap: 40px;
+  }
+  @include breakpoint(1440) {
+    padding-bottom: 60px;
+  }
+  @include breakpoint(990) {
+    gap: 20px;
+    justify-content: space-around;
+  }
+  @include breakpoint(768) {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 60px;
+  }
+
+  &_content {
+    width: 526px;
+    @include breakpoint(990) {
+      width: 40%;
+    }
+    @include breakpoint(768) {
+      width: 80%;
+      text-align: center;
+    }
+    .title {
+      margin-bottom: 80px;
+      @include breakpoint(1440) {
+        margin-bottom: 40px;
+      }
+      @include breakpoint(990) {
+        margin-bottom: 20px;
+      }
+    }
+    .text {
+      margin-bottom: 48px;
+      @include breakpoint(1440) {
+        margin-bottom: 20px;
+      }
+      @include breakpoint(990) {
+        margin-bottom: 10px;
+      }
+    }
+    .last_text {
+      margin-bottom: 108px;
+      @include breakpoint(1440) {
+        margin-bottom: 40px;
+      }
+      @include breakpoint(990) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &_image {
+    margin-left: 80px;
+    margin-top: 100px;
+
+    @include breakpoint(1800) {
+      margin-left: 40px;
+      width: 50%;
+    }
+
+    @include breakpoint(1440) {
+      margin: 0;
+    }
+    @include breakpoint(768) {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &_bg {
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include breakpoint(1440) {
+      display: none;
+    }
+  }
+}

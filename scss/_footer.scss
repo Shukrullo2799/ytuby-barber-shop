@@ -1,0 +1,52 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 50px;
+  @include breakpoint(768) {
+    padding: 50px 20px;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: $btn-bg;
+    max-width: 1362px;
+  }
+  .text {
+    max-width: 526px;
+    text-align: center;
+  }
+  &_social {
+    display: flex;
+    gap: 25px;
+    .icon {
+      width: 67px;
+      height: 67px;
+      background-color: $social-bg;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $btn-bg;
+      }
+      @include breakpoint(768) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  &_bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(1440) {
+      display: none;
+    }
+  }
+}
